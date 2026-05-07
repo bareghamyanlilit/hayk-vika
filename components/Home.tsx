@@ -6,24 +6,11 @@ import { MusicPlayer } from "./music";
 import { anim, txt1, txt1_1, txt2, txt2_1, txt3 } from "@/data/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Program } from "./Program";
 
 export function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
-  // const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2500);
-  // }, []);
-
-  // if (loading) {
-  //   return (
-  //     <div className="FontSHK_Dzeragir flex items-center justify-center h-screen text-3xl">
-  //       Loading...
-  //     </div>
-  //   );
-  // }
   return (
     <div className="text-center text-[#184CD7] overflow-hidden  FontSHK_Dzeragir ">
       {/* music button */}
@@ -83,7 +70,7 @@ export function Home() {
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You
         </div>
-        <div  className="FontBabylonica-Regular whitespace-nowrap animate-marquee text-6xl mb-10 rotate-2  -translate-x-full">
+        <div className="FontBabylonica-Regular whitespace-nowrap animate-marquee text-6xl mb-10 rotate-2  -translate-x-full">
           I Love You I Love You I Love You I Love You I Love You I Love You I
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You I Love You I Love You I Love You I Love You I Love You
@@ -91,7 +78,7 @@ export function Home() {
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You
         </div>
-        <div  className="FontBabylonica-Regular whitespace-nowrap animate-marquee-2 text-5xl mt-15  -rotate-2 -translate-x-full">
+        <div className="FontBabylonica-Regular whitespace-nowrap animate-marquee-2 text-5xl mt-15  -rotate-2 -translate-x-full">
           I Love You I Love You I Love You I Love You I Love You I Love You I
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You I Love You I Love You I Love You I Love You I Love You
@@ -99,7 +86,7 @@ export function Home() {
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You
         </div>
-        <div  className="FontBabylonica-Regular whitespace-nowrap animate-marquee text-4xl mb-10 rotate-2  -translate-x-full">
+        <div className="FontBabylonica-Regular whitespace-nowrap animate-marquee text-4xl mb-10 rotate-2  -translate-x-full">
           I Love You I Love You I Love You I Love You I Love You I Love You I
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You I Love You I Love You I Love You I Love You I Love You
@@ -123,7 +110,7 @@ export function Home() {
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You
         </div>
-        <div  className="FontBabylonica-Regular whitespace-nowrap animate-marquee-2 text-xl mt-15 -rotate-2 -translate-x-full">
+        <div className="FontBabylonica-Regular whitespace-nowrap animate-marquee-2 text-xl mt-15 -rotate-2 -translate-x-full">
           I Love You I Love You I Love You I Love You I Love You I Love You I
           Love You I Love You I Love You I Love You I Love You I Love You I Love
           You I Love You I Love You I Love You I Love You I Love You I Love You
@@ -142,26 +129,8 @@ export function Home() {
 
       <TimeBox />
 
-      <motion.p {...anim} className="relative text-sovorakan  text-2xl my-10">
-        <span className=" text-sovorakan text-2xl mt-10">{txt3}</span>
+      <Program />
 
-        <Link href="">
-          <span className=" flex items-center gap-2 justify-center mt-5 relative">
-            <span>Հասցե</span>
-
-            <Image
-              src="/icon3.png"
-              alt="icon1"
-              width={500}
-              height={500}
-              className=" w-5 h-5 object-cover"
-            />
-          </span>
-        </Link>
-        <span className=" absolute w-[200%] -z-1 text-4xl -top-1 left-1/2 -translate-x-1/2 text-taki">
-          {txt3}
-        </span>
-      </motion.p>
       <motion.div {...anim} className="px-5">
         <Image
           src="/img2.jpg"

@@ -1,36 +1,55 @@
 import { anim, program } from "@/data/data";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Program() {
   return (
-    <div className="FontSHK_Dzeragir p-7">
-      <motion.h3 {...anim} className=" relative text-[32px] mb-45">
-        ժԱՄԱՆԱԿԱՑՈՒՅՑ
-        <p className=" absolute z-1 text-5xl top-3 left-1/2 -translate-x-1/2 text-[#5800001A]">
-          ժԱՄԱՆԱԿԱՑՈՒՅՑ
-        </p>
-      </motion.h3>
-      <div className="relative flex flex-col gap-20">
-        {program.map((el: any, i: number) => {
-          return (
-            <div
-              key={i}
-              className={`${i % 2 == 0 ? " self-end" : "self-start"} ${i == 2 ? "mt-55" : ""}  ${i == 3 ? "mt-10" : ""}`}
-            >
-              <motion.p {...anim} className="w-max text-xl relative">
-                {el.title}
-                <span className={`${i % 2 == 0 ? " right-0" : "left-0"} absolute -z-1 text-[80px] -top-5   text-[#5800001A]`}>
-                  {el.time}
-                </span>
-              </motion.p>
-              <motion.h3 {...anim} className={`${i % 2 == 0 ? " text-end" : "text-start"} text-[28px]`}>
-                {el.time}
-              </motion.h3>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <section className=" FontArmHmk text-vrayi px-6 ">
+      <motion.h2 {...anim} className="text-center text-4xl mb-10 my-20 ">
+        Ժամանակացույց
+      </motion.h2>
+
+      {program.map((item: any, i: any) => (
+        <div className=" bg-cover bg-no-repeat  bg-center" key={i}>
+          <ProgramItem {...item} />
+        </div>
+      ))}
+    </section>
   );
 }
+
+const getImage = (title: any) => {
+  if (title === "Պսակադրություն") return "/ekexeci.jpg";
+  if (title === "Հարսանյաց սրահ") return "/restoran.jpg";
+  return null;
+};
+
+const ProgramItem = ({ time, title, address ,subt}: any) => {
+  const img = getImage(title);
+
+  return (
+    <div className="my-10 flex flex-col items-center text-xl">
+      <motion.h3 {...anim} className="text-3xl">{title}</motion.h3>
+      <motion.p {...anim} className="text-xl opacity-80">
+        {subt}
+      </motion.p>
+      <motion.p {...anim} className="text-3xl">
+        {time}
+      </motion.p>
+
+      {img && <img src={img} className="my-4 max-w-full rounded" />}
+
+      <motion.a
+        {...anim}
+        href={`https://www.google.com/maps/search/${address}`}
+        target="_blank"
+        className="bg-guyn text-[#f1f1f1] px-4 py-2 mt-6 rounded-[10px] text-sm"
+      >
+        Ինչպես հասնել
+      </motion.a>
+
+      {title !== "Հարսանյաց սրահ" && (
+        <img src="/icon3.png" className=" w-20 mt-10" />
+      )}
+    </div>
+  );
+};

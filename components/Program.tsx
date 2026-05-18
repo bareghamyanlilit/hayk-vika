@@ -19,7 +19,7 @@ export function Program() {
 
 
 
-const ProgramItem = ({ time, title, subt }: any) => {
+const ProgramItem = ({ time, title, address, subt }: any) => {
 
   return (
     <div className="my-10 flex flex-col items-center text-xl">
@@ -33,7 +33,7 @@ const ProgramItem = ({ time, title, subt }: any) => {
 
       <motion.a
         {...anim}
-        href={`${title === 'Պսակադրություն' ? "https://maps.apple.com/place?coordinate=40.366667,45.133333&name=Sayadyan%20112/2%20Gavar&map=explore" : "https://www.google.com/maps/search/${address}"}`}
+        href={address}
         target="_blank"
         className="bg-guyn text-[#f1f1f1] px-4 py-2 mt-6 rounded-[10px] text-sm"
       >

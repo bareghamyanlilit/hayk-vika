@@ -17,14 +17,9 @@ export function Program() {
   );
 }
 
-const getImage = (title: any) => {
-  if (title === "Պսակադրություն") return "/ekexeci.jpg";
-  if (title === "Հարսանյաց սրահ") return "/restoran.jpg";
-  return null;
-};
+
 
 const ProgramItem = ({ time, title, address ,subt}: any) => {
-  const img = getImage(title);
 
   return (
     <div className="my-10 flex flex-col items-center text-xl">
@@ -35,8 +30,6 @@ const ProgramItem = ({ time, title, address ,subt}: any) => {
       <motion.p {...anim} className="text-3xl">
         {time}
       </motion.p>
-
-      {img && <img src={img} className="my-4 max-w-full rounded" />}
 
       <motion.a
         {...anim}

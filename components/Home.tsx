@@ -119,11 +119,11 @@ export function Home() {
           You I Love You
         </div>
         <Image
-          src="/img4.jpg"
+          src="/img2.jpg"
           alt="icon1"
           width={500}
           height={500}
-          className="w-[80%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl absolute object-cover  "
+          className="w-[60vw] h-[60vw] rotate-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute object-cover  "
         />
       </div>
 
@@ -133,7 +133,7 @@ export function Home() {
 
       <motion.div {...anim} className="px-5">
         <Image
-          src="/img2.jpg"
+          src="/img3.jpg"
           alt="icon1"
           width={500}
           height={500}

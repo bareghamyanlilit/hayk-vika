@@ -3,7 +3,7 @@ export const program: any = [
     time: "13:00",
     title: "Պսակադրություն",
     subt:'Սուրբ Աստվածածին Եկեղեցի',
-    address: "Saint+Astvatsatsin+Armenian+Church/@40.185825,45.7279651,20.5z/data=!4m6!3m5!1s0x403f95e090155555:0xf86c7057c2695183!8m2!3d40.1858358!4d45.7279716!16s%2Fg%2F11txmz70tg?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D",
+    address: "https://maps.apple.com/place?map=explore&address=Charents+Street%2C+Vardenis%2C+Armenia&coordinate=40.185817%2C45.728211&name=Charents+Street",
   },
   {
     time: "17:00",

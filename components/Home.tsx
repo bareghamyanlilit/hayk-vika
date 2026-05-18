@@ -123,7 +123,7 @@ export function Home() {
           alt="icon1"
           width={500}
           height={500}
-          className="w-[60vw] h-[60vw] rotate-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute object-cover  "
+          className="w-[60vw] h-[60vw] md:w-[20vw] md:h-[20vw] rotate-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute object-cover  "
         />
       </div>
 
